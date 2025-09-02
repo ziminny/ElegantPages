@@ -4,7 +4,7 @@ import SwiftUI
 
 private class UpdateUIViewControllerBugFixClass { }
 
-struct ElegantListController: UIViewControllerRepresentable, ElegantListManagerDirectAccess, PageTurnTypeDirectAccess {
+struct ElegantListController: UIViewControllerRepresentable, @preconcurrency ElegantListManagerDirectAccess, @preconcurrency PageTurnTypeDirectAccess {
 
     typealias UIViewControllerType = ElegantTriadPagesController
 

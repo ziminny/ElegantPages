@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct ElegantPagesView<Stack>: View, ElegantPagesManagerDirectAccess where Stack: View {
+struct ElegantPagesView<Stack>: View, @preconcurrency ElegantPagesManagerDirectAccess where Stack: View {
 
     @State private var translation: CGFloat = .zero
     @State private var isDragging = false

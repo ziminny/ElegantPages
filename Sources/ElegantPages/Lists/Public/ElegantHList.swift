@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-public struct ElegantHList: View, ElegantListManagerDirectAccess {
+public struct ElegantHList: View, @preconcurrency ElegantListManagerDirectAccess {
 
     @ObservedObject public var manager: ElegantListManager
     public let pageTurnType: PageTurnType

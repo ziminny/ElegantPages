@@ -2,4 +2,4 @@
 
 import UIKit
 
-let screen = UIScreen.main.bounds
+@MainActor let screen = UIScreen.main.bounds

@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct ElegantListView<List>: View, ElegantListManagerDirectAccess, PageTurnTypeDirectAccess where List: View {
+struct ElegantListView<List>: View, @preconcurrency ElegantListManagerDirectAccess, @preconcurrency PageTurnTypeDirectAccess where List: View {
 
     @State private var translation: CGFloat = .zero
     @State private var isTurningPage = false

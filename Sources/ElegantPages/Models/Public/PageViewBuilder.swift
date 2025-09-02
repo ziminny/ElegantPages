@@ -25,11 +25,11 @@ public struct PageContainer<Content>: View where Content: View {
 @_functionBuilder
 public struct PageViewBuilder {
 
-    public static func buildBlock<Content>(_ c: Content) -> PageContainer<Content> {
+    @MainActor public static func buildBlock<Content>(_ c: Content) -> PageContainer<Content> {
         return PageContainer(count: 1, content: c)
     }
 
-    public static func buildBlock<C0, C1>(
+    @MainActor public static func buildBlock<C0, C1>(
         _ c0: C0,
         _ c1: C1
     ) -> PageContainer<TupleView<(C0, C1)>>
@@ -41,7 +41,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 2, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2>(
+    @MainActor public static func buildBlock<C0, C1, C2>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2
@@ -55,7 +55,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 3, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2, C3>(
+    @MainActor public static func buildBlock<C0, C1, C2, C3>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2,
@@ -71,7 +71,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 4, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2, C3, C4>(
+    @MainActor public static func buildBlock<C0, C1, C2, C3, C4>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2,
@@ -89,7 +89,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 5, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2, C3, C4, C5>(
+    @MainActor public static func buildBlock<C0, C1, C2, C3, C4, C5>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2,
@@ -109,7 +109,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 6, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2, C3, C4, C5, C6>(
+    @MainActor public static func buildBlock<C0, C1, C2, C3, C4, C5, C6>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2,
@@ -131,7 +131,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 7, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(
+    @MainActor public static func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2,
@@ -155,7 +155,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 8, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(
+    @MainActor public static func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2,
@@ -181,7 +181,7 @@ public struct PageViewBuilder {
         return PageContainer(count: 9, content: compositeView)
     }
 
-    public static func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(
+    @MainActor public static func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(
         _ c0: C0,
         _ c1: C1,
         _ c2: C2,
